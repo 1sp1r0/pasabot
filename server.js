@@ -44,9 +44,41 @@ var Botkit = require('botkit');
     });
 
 
-    var interval = setInterval(function(){
-      console.log("rebooting api")
-    },20000);
+   setInterval(function() {
+
+
+console.log("setInterval: It's been one second!");
+
+
+  var url = 'https://slack.com/api/chat.postMessage?token=xoxp-24593085397-24595017072-37737430626-3ed982f1e5&channel=%23testto&text=test%20again&username=Jerobot';
+
+
+
+   var dato = new Date();
+    if(dato.getHours()==16){
+
+
+       request.get({
+           url: url
+       }, function (err, resp, body) {
+
+           if (err) {
+               console.error("Error occured: ", err);
+               //res.end('Error');
+                 return;
+           } else {
+                console.log(body);
+               //console.log("hello----------------------------");
+               // console.log(body.length)
+           }
+
+       });
+
+   }
+
+
+
+}, 10000);
 http.createServer(function(req, res) {
       
 
