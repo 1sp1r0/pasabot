@@ -1,5 +1,5 @@
 var http = require('http');
-var port = 3000;
+
 
 var Botkit = require('botkit');
     var controller = Botkit.slackbot();
@@ -43,4 +43,4 @@ http.createServer(function(req, res) {
 
 
       res.end("Hello world");
-}).listen(port);
+}).listen(.listen(process.env.PORT || 5000);
