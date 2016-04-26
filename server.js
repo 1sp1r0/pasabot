@@ -31,6 +31,9 @@ var Botkit = require('botkit');
     controller.hears(["Fuck","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
           bot.reply(message,'You too');
     });
+    controller.hears(["oi","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
+          bot.reply(message,'কী হইসে ভাল্লাগে না???');
+    });
 
 
 http.createServer(function(req, res) {
