@@ -21,7 +21,11 @@ var Botkit = require('botkit');
     });
 
     controller.hears(["Who are you?","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
-          bot.reply(message,"I'm a bot made by @reza, I think you know him");
+          bot.reply(message,{
+      text: "A more complex response",
+      username: "ReplyBot",
+      icon_emoji: ":dash:",
+    });
     });
 
     controller.hears(["Fuck","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
