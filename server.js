@@ -32,7 +32,11 @@ var Botkit = require('botkit');
           bot.reply(message,'You too');
     });
     controller.hears(["oi","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
-          bot.reply(message,'কী হইসে ভাল্লাগে না???');
+          bot.reply(message,'কী হইসে, ভাল্লাগে না???');
+    });
+
+    controller.hears(["What is Graffiti Ten","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
+          bot.reply(message,'Graffiti Ten is a way to pass your thoghts to future.');
     });
 
 
