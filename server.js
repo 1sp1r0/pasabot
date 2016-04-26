@@ -55,7 +55,7 @@ console.log("setInterval: It's been one second!");
 
 
    var dato = new Date();
-    if(dato.getHours()==16){
+    if(dato.getHours()==17){
 
 
        request.get({
