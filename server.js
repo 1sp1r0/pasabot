@@ -23,8 +23,8 @@ var Botkit = require('botkit');
     controller.hears(["Who are you?","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
           bot.reply(message,{
       text: "A more complex response",
-      username: "ReplyBot",
-      icon_emoji: ":dash:",
+      username: "পাছা",
+      icon_emoji: ":poop:",
     });
     });
 
