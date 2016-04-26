@@ -36,7 +36,7 @@ var Botkit = require('botkit');
     });
 
     controller.hears(["What is Graffiti Ten","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
-          bot.reply(message,'Graffiti Ten is a way to pass your thoghts to future.');
+          bot.reply(message,'Graffiti Ten is a way to pass your thoughts to future.');
     });
 
 
