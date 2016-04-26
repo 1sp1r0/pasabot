@@ -16,6 +16,10 @@ var Botkit = require('botkit');
           bot.reply(message,'Hello there');
     });
 
+        controller.hears(["there","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
+          bot.reply(message,'Yep... What do you want? Gimme a break');
+    });
+
     controller.hears(["hello","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
           bot.reply(message,"What's up!");
     });
@@ -40,7 +44,12 @@ var Botkit = require('botkit');
     });
 
 
+    var interval = setInterval(function(){
+      console.log("rebooting api")
+    },20000);
 http.createServer(function(req, res) {
+      
+
       res.writeHead(200, {
             'Content-Type': 'text/plain'
       });
