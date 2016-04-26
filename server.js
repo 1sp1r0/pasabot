@@ -12,15 +12,23 @@ var Botkit = require('botkit');
     }
     });
 
-    controller.hears(["world","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
-  // do something to respond to message
-  // all of the fields available in a normal Slack message object are available
-  // https://api.slack.com/events/message
-  bot.reply(message,'You used a keyword!');
-  bot.say("howdy")
-});
+    controller.hears(["hi","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
+          bot.reply(message,'Hello there');
+    });
 
-    
+    controller.hears(["hello","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
+          bot.reply(message,"What's up!");
+    });
+
+    controller.hears(["Who are you?","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
+          bot.reply(message,"I'm a bot made by Reza, I think you know him");
+    });
+
+    controller.hears(["Fuck","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
+          bot.reply(message,'You too');
+    });
+
+
 http.createServer(function(req, res) {
       res.writeHead(200, {
             'Content-Type': 'text/plain'
