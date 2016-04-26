@@ -1,13 +1,7 @@
 var http = require('http');
 var port = 3000;
 
-http.createServer(function(req, res) {
-      res.writeHead(200, {
-            'Content-Type': 'text/plain'
-      });
-
-
-      var Botkit = require('botkit');
+var Botkit = require('botkit');
     var controller = Botkit.slackbot();
     var bot = controller.spawn({
     token: 'xoxb-37740112834-cp4LAjC3p5hGQZKQarY0kQQ5'
@@ -25,6 +19,15 @@ http.createServer(function(req, res) {
   bot.reply(message,'You used a keyword!');
   bot.say("howdy")
 });
+
+    
+http.createServer(function(req, res) {
+      res.writeHead(200, {
+            'Content-Type': 'text/plain'
+      });
+
+
+    
 
 
       res.end("Hello world");
